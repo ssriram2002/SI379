@@ -1,0 +1,26 @@
+.clickable {
+    background-image: url("images/zzz.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:150px;
+    width: 200px;
+    display: inline-block;
+    border: 2px solid black;
+    background-color: #EEE;
+    border-radius: 20%;
+}
+
+.clickable.clicked {
+    background-image: url("images/pow.png");
+    border: 2px solid red;
+    background-color: #FEE;
+    animation: spin 1s ease-in-out normal; /* Jiggle animation */
+}
+
+/* Animation keyframes to make the image jiggle */
+@keyframes spin {
+    0%   { transform: rotate(0deg);   }
+    33%  { transform: rotate(30deg);  }
+    66%  { transform: rotate(-30deg); }
+    100% { transform: rotate(0deg);   }
+}
