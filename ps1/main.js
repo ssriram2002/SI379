@@ -30,7 +30,7 @@ for(const id of getAllHoleIds()) {
                 score ++ ;
                 document.getElementById("score").innerHTML= "Score: " + score;
             }
-            if (score > 45){
+            if (score >= 45){
                 clearInterval(interval);
                 console.log(`TODO: Add a click listener for #${id} here`)
             } ;
