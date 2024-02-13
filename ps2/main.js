@@ -53,10 +53,10 @@ inputEl.addEventListener("keydown", (ev) =>{
         const guess = inputEl.value;
        console.log("ENTER KEY HIT")
        if (guess.length !==  WORD_LENGTH){
-        showInfoMessage('Your guess must be {WORD_LENGTH} letters long.');
+        showInfoMessage(`Your guess must be ${WORD_LENGTH} letters long.`);
        }
        else if (guess.toUpperCase() === correctAnswer.toUpperCase() ) {
-        showInfoMessage('You win! The answer was "{correctAnswer}');
+        showInfoMessage(`You win! The answer was ${correctAnswer}`);
         inputEl.setAttribute('disabled', true);
        }
        else {
@@ -66,7 +66,7 @@ inputEl.addEventListener("keydown", (ev) =>{
                 displayGuessFeedback(guess);
             }
             else{
-                showInfoMessage('{guess} is not a valid word.');
+                showInfoMessage(`${guess} is not a valid word.`);
             }
         });
        }
