@@ -31,6 +31,14 @@ getUMEventsWithImages((eventsData) =>{
 function setSelectedIndex (i) {
    
     const selectedEvent = UMevents[i];
+
+    if (timeout_id){
+        clearTimeout(timeout_id);
+    }
+    //clears timeout
+    timeout_id = setTimeout(()=> {
+        setSelectedIndex((i+1)%UMevents.length);
+    }, 10000);
      //set time out has two arguments: function refrence and the time 
     //function we want to run after 10 sections is set selected index of the next item/img
     //modular function, returns remainder of division function. dividing length by #of events and if it is remainder 1 returns to index 0 
@@ -43,7 +51,7 @@ function setSelectedIndex (i) {
     //sets title href to img src url 
     document.querySelector('#selected-date').innerText =  getReadableTime(selectedEvent.datetime_start);
 
-    document.querySelector('selected-image').setAttribute('src', selectedEvent.image_url);
+    document.querySelector('#selected-image').setAttribute('src', selectedEvent.image_url);
 
     document.querySelector('#selected-description').innerText = selectedEvent.description;
 
@@ -52,14 +60,7 @@ function setSelectedIndex (i) {
         select.classList.remove('selected');
     }
 
-    document.querySelector(`thumb-${selectedEvent.id}`).classList.add('selected');
+    document.querySelector(`#thumb-${selectedEvent.id}`).classList.add('selected');
 
-    if (timeout_id){
-        clearTimeout(timeout_id);
-    }
-    //clears timeout
-    timeout_id = setTimeout(()=> {
-        setSelectedIndex((selectedEvent+1)%UMevents.length);
-    }, 10000)
     
 }
