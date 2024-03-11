@@ -29,7 +29,6 @@ async function fetchQuestions() {
 let currentQuestionIndex = 0;
 let correctCount = 0;
 let attemptedCount= 0;
-let q_clicked = false;
 
 
 async function showQuestion() {
@@ -39,6 +38,7 @@ async function showQuestion() {
     const questionText = currentQuestion['question']['text'];
     console.log(questionText);
     const correct_answer= currentQuestion['correctAnswer'];
+    console.log(correct_answer);
     const inocorrect_answers= currentQuestion['incorrectAnswers'];
     const answers = [correct_answer, ...inocorrect_answers];
 
@@ -54,35 +54,40 @@ async function showQuestion() {
     const answerList = document.createElement('ul');
 
     for (const answer of shuffledAnswers){
+        console.log(answer);
+        let q_clicked = false;
         const answerListElem = document.createElement("li");
         const answerListElemButton= document.createElement("button");
 
         answerListElemButton.innerHTML += `${answer}`;
-        answerListElem.append(answerListElemButton)
+        answerListElem.append(answerListElemButton);
         answerList.append(answerListElem);
         answerListElem.addEventListener('click', () => {
-            if (!q_clicked){
+            if (q_clicked!=true){
                 attemptedCount++;
                 document.getElementById('attempted-count').textContent = attemptedCount;
                 if (answer === correct_answer) {
+                    console.log('correct_answer');
+                    console.log(correct_answer);
                     answerListElemButton.classList.add=='green';
-                correctCount++; 
+                    correctCount++; 
+                    document.getElementById('correct-count').textContent = correctCount;
+                    
                 }else{
                     answerListElemButton.classList.add=='red';
+                    q_clicked === true;
                 }
-        }} );
+    
+        }
+        });
 
-        document.getElementById('correct-count').textContent = correctCount;
-        answered = true;
     }
 
-    if (currentQuestionIndex < questions_API.length - 1) {
-        currentQuestionIndex++;
-    }
     currentQBox.appendChild(answerList);
     document.getElementById('questionsBox').appendChild(currentQBox);
 }
 
-for (let i = 0; i < 10; i++) {
+
+for (let i = 0; i < 11; i++) {
     showQuestion();
   };

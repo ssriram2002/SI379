@@ -2,10 +2,10 @@ body{
     color:black;
 }
 
-.red{
+button .red{
     background-color: red;
 }
 
-.green{
+button .green{
     background-color: green;
 }
