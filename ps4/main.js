@@ -29,6 +29,7 @@ async function fetchQuestions() {
 let currentQuestionIndex = 0;
 let correctCount = 0;
 let attemptedCount= 0;
+let q_clicked = false;
 
 
 async function showQuestion() {
@@ -54,19 +55,25 @@ async function showQuestion() {
 
     for (const answer of shuffledAnswers){
         const answerListElem = document.createElement("li");
-        answerListElem.innerHTML += `${answer}`;
-        answerListElem.addEventListener('click', () => {
-            attemptedCount++;
-            document.getElementById('attempted-count').textContent = attemptedCount;
-            if (answer === correct_answer) {
-               answerListElem.classList.add=='green';
-               correctCount++; 
-            }else{
-                answerListElem.classList.add=='red';
-            }
-        });
-        document.getElementById('correct-count').textContent = correctCount;
+        const answerListElemButton= document.createElement("button");
+
+        answerListElemButton.innerHTML += `${answer}`;
+        answerListElem.append(answerListElemButton)
         answerList.append(answerListElem);
+        answerListElem.addEventListener('click', () => {
+            if (!q_clicked){
+                attemptedCount++;
+                document.getElementById('attempted-count').textContent = attemptedCount;
+                if (answer === correct_answer) {
+                    answerListElemButton.classList.add=='green';
+                correctCount++; 
+                }else{
+                    answerListElemButton.classList.add=='red';
+                }
+        }} );
+
+        document.getElementById('correct-count').textContent = correctCount;
+        answered = true;
     }
 
     if (currentQuestionIndex < questions_API.length - 1) {
