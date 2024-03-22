@@ -29,65 +29,70 @@ async function fetchQuestions() {
 let currentQuestionIndex = 0;
 let correctCount = 0;
 let attemptedCount= 0;
-
+q_clicked= false;
 
 async function showQuestion() {
     const questions_API = await fetchQuestions();
-    const currentQuestion = questions_API[currentQuestionIndex];
-    console.log(currentQuestion);
-    const questionText = currentQuestion['question']['text'];
-    console.log(questionText);
-    const correct_answer= currentQuestion['correctAnswer'];
-    console.log(correct_answer);
-    const inocorrect_answers= currentQuestion['incorrectAnswers'];
-    const answers = [correct_answer, ...inocorrect_answers];
+    for (const q of questions_API){
+        const currentQuestion = questions_API[currentQuestionIndex];
+        //console.log(currentQuestion);
+        const questionText = currentQuestion['question']['text'];
+        //console.log(questionText);
+        const correct_answer= currentQuestion['correctAnswer'];
+        //console.log(correct_answer);
+        const incorrect_answers= currentQuestion['incorrectAnswers'];
+        const answers = [correct_answer, ...incorrect_answers];
 
-    
-    const shuffledAnswers = shuffleArray(answers);
+        
+        const shuffledAnswers = shuffleArray(answers);
 
-    const currentQBox = document.createElement('div');
+        const currentQBox = document.createElement('div');
 
 
-    currentQBox.innerHTML +=`${questionText}`;
+        currentQBox.innerHTML +=`${questionText}`;
 
-    
-    const answerList = document.createElement('ul');
+        
+        const answerList = document.createElement('ul');
 
-    for (const answer of shuffledAnswers){
-        console.log(answer);
-        let q_clicked = false;
-        const answerListElem = document.createElement("li");
-        const answerListElemButton= document.createElement("button");
+        for (const answer of shuffledAnswers){
+            console.log(answer);
+            let q_clicked = false;
+            const answerListElem = document.createElement("li");
+            const answerListElemButton= document.createElement("button");
 
-        answerListElemButton.innerHTML += `${answer}`;
-        answerListElem.append(answerListElemButton);
-        answerList.append(answerListElem);
-        answerListElem.addEventListener('click', () => {
-            if (q_clicked!=true){
-                attemptedCount++;
-                document.getElementById('attempted-count').textContent = attemptedCount;
-                if (answer === correct_answer) {
-                    console.log('correct_answer');
-                    console.log(correct_answer);
-                    answerListElemButton.classList.add=='green';
-                    correctCount++; 
-                    document.getElementById('correct-count').textContent = correctCount;
-                    
-                }else{
-                    answerListElemButton.classList.add=='red';
-                    q_clicked === true;
-                }
-    
+            answerListElemButton.innerHTML += `${answer}`;
+            answerListElem.append(answerListElemButton);
+            answerList.append(answerListElem);
+            answerListElemButton.addEventListener('click', () => {
+                if (q_clicked!==true){
+                    attemptedCount++;
+                    document.getElementById('attempted-count').textContent = attemptedCount;
+                    if (answer === correct_answer) {
+                        correctCount++;
+                        console.log('correct_answer');
+                        //console.log(correct_answer);
+                        answerListElemButton.classList.add('green');
+                        document.getElementById('correct-count').textContent = correctCount;
+                        q_clicked=true;
+                    }else{
+                        answerListElemButton.classList.add('red');
+                        q_clicked=true;
+                    }
+        
+            }
+            for (const answer of answerList.querySelectorAll('button')){
+                answer.disabled=true;
+            }
+            });
+
         }
-        });
+        currentQuestionIndex++;
 
-    }
-
-    currentQBox.appendChild(answerList);
-    document.getElementById('questionsBox').appendChild(currentQBox);
+        currentQBox.appendChild(answerList);
+        document.getElementById('questionsBox').appendChild(currentQBox);
 }
 
+};
 
-for (let i = 0; i < 11; i++) {
-    showQuestion();
-  };
+
+showQuestion();
