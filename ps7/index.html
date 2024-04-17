@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemon Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lemon Timer</h1>
+    <div id="taskList">
+      <!-- Task list will be populated dynamically -->
+    </div>
+    <button id="addTaskBtn">Add Task</button>
+    <div id="settings">
+      <label for="workTime">Work Time (minutes):</label>
+      <input type="number" id="workTime" value="25" min="1">
+      <label for="breakTime">Break Time (minutes):</label>
+      <input type="number" id="breakTime" value="5" min="1">
+    </div>
+  </div>
+
+  <!-- Task details modal -->
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <input type="text" id="taskInput" placeholder="Task Description">
+      <button id="saveTaskBtn">Save</button>
+    </div>
+  </div>
+
+  <!-- Work session modal -->
+  <div id="workSessionModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Work Session</h2>
+      <p id="workSessionText">Happy Working!!!
+        <div id="timerDisplay"></div>
+      </p>
+      <button id="startWorkBtn">Start Work</button>
+    </div>
+  </div>
+
+  <!-- Break session modal -->
+  <div id="breakSessionModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Break Session</h2>
+      <p id="breakSessionText">Take a short break and relax.
+        <div id="timerDisplay"></div>
+      </p>
+      <button id="startBreakBtn">Start Break</button>
+    </div>
+  </div>
+
+  
+
+  <!-- Timer and Lemons display -->
+
+  <script src="script.js"></script>
+</body>
+</html>
