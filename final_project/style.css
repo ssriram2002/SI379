@@ -1,0 +1,420 @@
+html{
+    background-color: black;
+}
+
+p{
+  font-size: medium;
+}
+.quiz-section{
+  display: none;
+}
+.welcome{
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+}
+body{
+    font-family: serif;
+}
+
+#sorting-hat{
+    background-color: transparent;
+    height: 50px;
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+}
+
+h2{
+    font-family: 'Cinzel', serif;
+    font-size:30px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color: white;
+}
+
+.houses-choices {
+  display: grid;
+  grid-template-columns: repeat(2, 350px); /* Two columns with fixed width */
+  grid-template-rows: 300px 200px; /* Two rows with fixed height */
+  grid-gap: 20px; /* Fixed gap between grid items */
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+  max-width: 600px;
+  }
+  
+  
+  /* Style for each house box */
+  .house {
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+  }
+
+  
+  /* Style for the button inside each house box */
+  .house button {
+    font-family: 'Cinzel';
+    font-size: 30px;
+    display: block;
+    color: #fff;
+    background-color: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  #gryffindor{
+    background-color: #740001;
+    color:#fff;
+    border: #d3a625;
+    border-style: double;
+    border-width: 6px;
+  }
+  #gryffindor button{
+    background-color: #740001;
+    color:#d3a625;
+    font-weight: 600;
+  }
+
+  #ravenclaw{
+    background-color: #0e1a40;
+    color:#fff;
+    border: #946b2d;
+    border-style: double;
+    border-width: 6px;
+  }
+  #ravenclaw button{
+    background-color: #0e1a40;
+    color:#946b2d;
+    font-weight: 600;
+  }
+
+  #slytherin{
+    background-color: #2a623d;
+    color:#fff;
+    border: #aaaaaa;
+    border-style: double;
+    border-width: 6px;
+
+  }
+  #slytherin button{
+    background-color: #2a623d;
+    color:#aaaaaa;
+    font-weight: 600;
+  }
+
+  #hufflepuff{
+    background-color: #ecb939;
+    color:#fff;
+    border: #372e29;
+    border-style: double;
+    border-width: 6px;
+  }
+  
+  #hufflepuff button{
+    background-color: #ecb939;
+    color:#372e29;
+    font-weight: 600;
+  }
+
+  
+  /* Style for the paragraph inside each house box */
+  .house p {
+    margin-top: 10px;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+  }
+
+  /* ------------------------------STYLE FOR QUIZES PAGE------------------------------ */
+.quiz-section {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Style for each quiz card */
+.quiz {
+  background-color: white;
+  max-width: 400px; 
+  width: 100%; 
+  height: 500px;
+  padding: 20px;
+  border: 4px double black;
+  margin: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Style for images */
+.quiz img {
+  width: 150px;
+  height: 150px;
+  size: fill;
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
+
+/* Style for buttons */
+.quiz h2 {
+  color: black;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 30px;
+  padding: 10px 20px;
+}
+.quiz:hover {
+  size-adjust: 110%;
+}
+
+/* Style for paragraph text */
+.quiz p {
+  font-family: serif;
+  font-size: 20px;
+}
+
+
+/* ------------------------------SPELL QUIZ STYLING------------------------------ */
+
+#spell-quiz-section{
+  display: none;
+}
+.individual-quiz-section {
+  display: none;
+  background-color: white;
+  border: 6px double black;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  flex-direction: column;
+}
+
+/* Style for the welcome section */
+.quizes-intro {
+  background-color: #d8cbc4;
+  border-radius: 10px;
+  border: 2px double black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-info-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.quiz-title {
+  color: black;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 30px;
+  text-align: center;
+  gap: 5px;
+  font-weight: 200;
+}
+
+
+.quiz-img {
+  background-color: transparent;
+  height: 70px;
+  width: fit-content;
+  align-self: center;
+  justify-self: center;
+}
+
+
+.quiz-description {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+
+#score, #timer {
+  text-align: center; 
+  font-family: inherit;
+  color: black;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.game-metrics-box{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  height: 80%;
+  border: #372e29 double 4px;
+}
+
+
+.correct{
+  background-color: #946b2d;
+  color: white;
+}
+
+.wrong{
+  background-color: #740001;
+  color:white
+}
+
+#spell-quiz-box{
+  display: flex;
+  justify-items: center;
+  text-align: left;
+  margin-top: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  box-shadow: inset;
+  font-size: 20px;
+}
+
+#spell-quiz-box button{
+  font-size: 15px;
+  padding: 7px;
+  text-align: center;
+}
+
+/* ------------------------------CHARACTER QUIZ STYLING------------------------------ */
+
+#character-quiz-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  gap: 10px;
+  margin: 30px;
+}
+
+#button-box button , .back-button, .new-quiz-button{
+  font-size: 15px;
+  padding: 7px;
+  background-color: #372e29;
+  color: white;
+  cursor: pointer;
+}
+
+#guess-input{
+  font-size: 15px;
+  padding: 7px;
+}
+
+#character-image-container img{
+  width: auto;
+  height: 400px;
+  border-radius: 20px;
+}
+
+
+#button-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.back-button, .new-quiz-button{
+  margin: 10px;
+  width: fit-content;
+  padding: 12px;
+
+}
+
+/* ------------------------------CHAPTER QUIZ STYLING------------------------------ */
+
+#chapter-quiz-section{
+  display: none;
+  padding: 30px;
+}
+
+#chapter-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;  
+  align-items: center;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+#chapter-buttons button img{
+  height: 100px;
+  width: auto;
+  align-items: center;
+}
+
+#chapter-buttons button{
+  border: white;
+  box-shadow: 5px 5px 5px #372e29 ;
+  cursor: pointer;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+#question-section{
+  display: block;
+  padding: 20px;
+  padding-right: 30px;
+}
+
+#chapter-hint{
+  display: none;
+}
+
+#chapter-buttons button:disabled{
+  border: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+}

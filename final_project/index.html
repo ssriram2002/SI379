@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <title>Hogwarts Trivia Tribunal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Cinzel+Decorative">
+    <script src="main.js" defer></script>
+</head>
+ <body>
+    <h1 class="welcome" >Welcome to the Hogwarts Trivia Tribunal!</h1>
+    <div class="house-box">
+        <h2><img src="sorting_hat_4.png" alt="sorting hat image" id="sorting-hat">  "Chose your house... "</h2>
+        <div class="houses-choices">
+                <div class= "house" id="gryffindor" >
+                    <button id="gryffindor-button">Gryffindor</button>
+                    <p>
+                        bravery, courageousness, and adventurer
+                    </p>
+                </div>
+                <div class= "house" id="hufflepuff">
+                    <button id="hufflepuff-button">Hufflepuff</button>
+                    <p>
+                        strong sense of justice, loyalty, patience, kindness
+                    </p>
+                </div>
+
+
+                <div class= "house" id="slytherin">
+                    <button id="slytherin-button">Slytherin</button>
+                    <p>
+                        ambition, resourcefulness, determination, and cleverness
+                    </p>
+                </div>
+                <div class= "house" id="ravenclaw">
+                    <button id="ravenclaw-button">Ravenclaw</button>
+                    <p>
+                        intelligence, learning, wisdom, and wit
+                    </p>
+                </div>
+        </div>
+    </div>
+    <div class="quiz-section">
+            <div class= "quiz" id="character-quiz-button">
+                <img src="person.png" alt="person">
+                <h2> Guess the Character</h2>
+                <p>
+                    Guess the character based on the picture that appears. Guess as many as you can!
+                </p>
+            </div>
+            <div class= "quiz" id="spell-quiz-button">
+                <img src="cauldron.png" alt="cauldron">
+                <h2>Guess the Spell or Potion</h2>
+                <p>
+                    Guess the spell or potion based on its use! 
+                </p>
+            </div>
+
+            <div class= "quiz" id="chapter-quiz-button">
+                <img src="books.png" alt="Harry Potter book stack">
+                <h2>Guess the Book the Chapter is in</h2>
+                <p>
+                    Guess the book this chapter name is in. Can't guess? You can use the chapter summary as a hint! 
+                </p>
+            </div>
+    </div>
+    <div class="individual-quiz-section" id="spell-quiz-section">
+        <div class= "quizes-intro">
+            <div class="quiz-info-text">
+                <h1 class="quiz-title">Guess the Spell or Potion <img src="cauldron.png" alt="cauldron" class="quiz-img"> </h1>
+                <p class="quiz-description">Would you pass your OWLS? Guess the name of a spell or potion by its effects! You have 10 minutes for 10 questions. 
+                </p>
+                <button class="new-quiz-button">New Quiz</button>
+            </div>
+            <div class="game-metrics-box">
+                <h1 id="score"> Score: <span id="correct-count">0</span>/<span id="attempted-count">0</span> </h1>
+                <h1 id="timer"> Time: <span id="spell-timer"> </span>  </h1>
+            </div>
+        </div>
+        <div id="spell-quiz-box"></div>
+        <button class="back-button">Back to Quizes</button>
+    </div>
+    <div class="individual-quiz-section" id="character-quiz-section">
+        <div class= "quizes-intro">
+            <div class="quiz-info-text">
+                <h1 class="quiz-title">Guess the charecter by the Actor <img src="person.png" alt="person" class="quiz-img"> </h1>
+                <p class="quiz-description">
+                    You have 30 seconds to guess the character as the image starts to fade into exsistence. Your time is up when the image is completely seen.  
+                </p>
+            </div>
+            <div class="game-metrics-box">
+                <h1 id="score"> Score: <span id="correct-count-character">0</span>/<span id="attempted-count-character">0</span> </h1>
+                <h1 id="timer"> Time: <span id="char-timer"></span> </h1>
+            </div>
+        </div>
+        <div id="character-quiz-box">
+            <div id="character-image-container"></div>
+            <input type="text" id="guess-input" placeholder="Enter your guess">
+            <div id="button-box">
+                <button id="submit-guess">Submit</button>
+                <button id="next-q">Next</button>
+            </div>
+            <div id="result"></div>
+        </div>
+        <button class="back-button">  &#60; Back to Quizes</button>
+    </div>
+
+    <div class="individual-quiz-section" id="chapter-quiz-section">
+        <div class= "quizes-intro">
+            <div class="quiz-info-text">
+                <h1 class="quiz-title">Guess the book this chapter is in <img src="books.png" alt="person" class="quiz-img"> </h1>
+                <p class="quiz-description">
+                    You have 1 minute to guess what book this chapter is in based on the title. Some chapters have chapter summaries some dont. If you see the hint button, the chapter has a summary! Otherwise, take your best guess, or click next for a new chapter.  
+                </p>
+            </div>
+            <div class="game-metrics-box">
+                <h1 id="score"> Score: <span id="correct-count-chapter">0</span>/<span id="attempted-count-chapter">0</span> </h1>
+                <h1 id="timer"> Time: <span id="chapter-timer"></span> </h1>
+            </div>
+        </div>
+        <div id="chapter-quiz-box">
+            <div id="chapter-container">
+                <div id="question-section">
+                    <h1 id="chapter-name"></h1>
+                    <p id="chapter-hint"></p>
+                </div>
+                <div id="chapter-buttons">
+                    <button class= "book-button" id="Harry Potter and the Philosopher's Stone"><img src="sorcerer's.jpg" alt="">Sorcerer's Stone</button>
+                    <button class= "book-button" id="Harry Potter and the Chamber of Secrets"><img src="chamber.jpg" alt="">Chamber of Secrets</button>
+                    <button class= "book-button" id="Harry Potter and the Prisoner of Azkaban"><img src="prisoner.jpg" alt="">Prisoner of Azkaban</button>
+                    <button class= "book-button" id="Harry Potter and the Goblet of Fire"><img src="goblet.jpg" alt="">Goblet of Fire</button>
+                    <button class= "book-button" id="Harry Potter and the Order of the Phoenix"><img src="order.jpg" alt="">Order of the Pheonix</button>
+                    <button class= "book-button" id="Harry Potter and the Half-Blood Prince"><img src="halfblood.jpg" alt="">Half-Blood Price</button>
+                    <button class= "book-button" id="Harry Potter and the Deathly Hallows"><img src="deathly.jpg" alt="">Deathly Hallows</button>
+                </div>
+            </div>
+            <div id="button-box">
+                <button id="chapter-hint-button">Hint</button>
+                <button id="next-q-chapter">Next</button>
+            </div>
+        </div>
+        <button class="back-button">  &#60; Back to Quizes</button>
+    </div>
+
+</body>
