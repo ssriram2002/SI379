@@ -340,7 +340,7 @@ function fadeIn(element) {
     var opacity = 0;
     var intervalID = setInterval(function() {
         if (opacity < 1) {
-            opacity += 0.001; // You can adjust the increment value for smoother or faster fading
+            opacity += 0.0001; // You can adjust the increment value for smoother or faster fading
             element.style.opacity = opacity;
         } else {
             clearInterval(intervalID);
