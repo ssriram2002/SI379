@@ -305,6 +305,7 @@ function displayCharacter(character) {
     characterTimer(img.alt,30);
     return;
 }
+
 // CharacterTimer
 function characterTimer(correctAnswer,time) {
     let countdownTime = time;
@@ -536,6 +537,7 @@ function checkAnswer(selectedBookTitle) {
     for (button of buttons){
         if (button.id != correctBookTitle){
             button.disabled=true;
+            button.style.cursor= 'not-allowed';
         }
         else{
             button.style.cursor= 'not-allowed';
@@ -603,7 +605,7 @@ function ChapterTimer(time) {
         clearInterval(previous_interval_chapter); // Stop the timer when it reaches zero
         // Perform any action you want when the countdown reaches zero
         console.log("Countdown finished!");
-        document.getElementById('spell-quiz-box').innerHTML = 'Times Up! Click next for a new chapter.';
+        document.getElementById('chapter-quiz-box').innerHTML = 'Times Up! Click next for a new chapter.';
         
     } }
     , 1000)
