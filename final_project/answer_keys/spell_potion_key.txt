@@ -1,0 +1,13 @@
+Potion Key: 
+(name:effect)
+
+1. Ageing Potion: Aged drinker temporarily
+2. Alihotsy Draught: Uncontrollable laughter
+3. Amortentia: Love potion that caused a powerful infatuation or obsession in the drinker
+4. Angel's Trumpet Draught: Poisonous
+5. Antidote to Common Poisons: Counteracted the effects of common poisons
+6. Antidote to Uncommon Poisons: Cures the effects of minor poisons
+7. Antidote to Veritaserum: Countered the effect of Veritaserum
+8. Anti-Paralysis Potion: Cured paralysis
+9. Babbling Beverage: Caused the drinker to speak nonsense
+10. Baneberry Potion: Poison
