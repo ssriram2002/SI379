@@ -12,12 +12,12 @@ Potion Key:
 9. Babbling Beverage: Caused the drinker to speak nonsense
 10. Baneberry Potion: Poison
 11. Baruffio's Brain Elixir: Allegedly increases one's brain power
-12: Beautification Potion: Enhances the attractiveness of the drinker's physical appearance
+12. Beautification Potion: Enhances the attractiveness of the drinker's physical appearance
 13. Befuddlement Draught: Recklessness
 14. Blood-Replenishing Potion: Replenished lost blood
-15: Bloodroot Poison: Poisonous
-16: Bruise removal paste: Healed bruises in an hour
-17: Bulgeye Potion: Causes eyes to bulge (presumably)
-18: Bundimum Pomade: Hair care
-19: Burn-healing paste: Healed burns
+11. Bloodroot Poison: Poisonous
+16. Bruise removal paste: Healed bruises in an hour
+17. Bulgeye Potion: Causes eyes to bulge (presumably)
+18. Bundimum Pomade: Hair care
+19. Burn-healing paste: Healed burns
 20. Burning Bitterroot Balm: soothing
