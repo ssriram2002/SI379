@@ -1,0 +1,43 @@
+Potion Key: 
+(name:effect)
+
+1. Ageing Potion: Aged drinker temporarily
+2. Alihotsy Draught: Uncontrollable laughter
+3. Amortentia: Love potion that caused a powerful infatuation or obsession in the drinker
+4. Angel's Trumpet Draught: Poisonous
+5. Antidote to Common Poisons: Counteracted the effects of common poisons
+6. Antidote to Uncommon Poisons: Cures the effects of minor poisons
+7. Antidote to Veritaserum: Countered the effect of Veritaserum
+8. Anti-Paralysis Potion: Cured paralysis
+9. Babbling Beverage: Caused the drinker to speak nonsense
+10. Baneberry Potion: Poison
+11. Baruffio's Brain Elixir: Allegedly increases one's brain power
+12. Beautification Potion: Enhances the attractiveness of the drinker's physical appearance
+13. Befuddlement Draught: Recklessness
+14. Blood-Replenishing Potion: Replenished lost blood
+11. Bloodroot Poison: Poisonous
+16. Bruise removal paste: Healed bruises in an hour
+17. Bulgeye Potion: Causes eyes to bulge (presumably)
+18. Bundimum Pomade: Hair care
+19. Burn-healing paste: Healed burns
+20. Burning Bitterroot Balm: soothing
+21. Calming Draught: Calms the drinker
+22. Caxambu Style Borborygmus Potion: Provoked stomach growling
+23. Confidence boosting brew: Made the drinker more confident
+24. Confusing Concotion: Confusion
+25. Contortion Potion: Induced contortion
+26. Cough Potion: Cured coughing
+27. Cupid Crystals: Causes the drinker to become infatuated with the giver of the potion
+28. Cure for Boils: Removes boils
+29. Dawdle Draught: Helps deal with Traces
+30. Death-Cap Draught: Poisonous
+31. Death potion: Highly corrosive, death on contact
+32. Deflating Draught: Deflated the target
+33. Developing solution: Develops moving photographs
+34. Dizziness Draught: Dizziness
+35. Dogbane Potion: Poisonous to dogs (possibly)
+36. Dogbreath Potion: Gives drinker fiery breath
+37. Doxycide: Temporarily stunned Doxies so that the pests could be removed from a home
+38. Dragon dung fertiliser: Promotes the growth of plants
+39. Dragon Poison: Poisonous
+40. Dragon Tonic: Cures sick dragons
